@@ -97,12 +97,13 @@
       var placeholderTextMultiple = iElm.attr('placeholder-text-multiple') !== undefined ? iAttr.placeholderTextMultiple : "Select Some Options";
       var displayDisabledOptions = iElm.attr('display-disabled-options') !== undefined ? JSON.parse(iAttr.displayDisabledOptions) : true;
       var displaySelectedOptions = iElm.attr('display-selected-options') !== undefined ? JSON.parse(iAttr.displaySelectedOptions) : true;
+      var searchContains = iElm.attr('search-contains') !== undefined ? false : true;
 
       iElm.chosen({
         width: '100%',
         max_selected_options: maxSelection,
         disable_search_threshold: searchThreshold,
-        search_contains: true,
+        search_contains: searchContains,
         allow_single_deselect: allowSingleDeselect,
         no_results_text: noResultsText,
         disable_search: disableSearch,
